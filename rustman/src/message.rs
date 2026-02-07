@@ -1,3 +1,5 @@
+use std::fmt::Debug;
+
 use crate::http_client::{ApiResponse, HttpMethod};
 
 
