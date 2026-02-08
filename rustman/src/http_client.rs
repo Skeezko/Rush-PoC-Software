@@ -23,6 +23,7 @@ impl HttpMethod {
     }
 }
 
+#[derive(Debug, Clone)]
 pub struct ApiResponse {
     pub status: u16,
     pub status_text : String,
