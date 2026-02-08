@@ -2,7 +2,6 @@ use std::fmt::Debug;
 
 use crate::http_client::{ApiResponse, HttpMethod};
 
-
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ResponseTab {
     Body,
@@ -21,4 +20,6 @@ pub enum Message {
     SendRequest,
     RequestCompleted(Result<ApiResponse, String>),
     TabChanged(ResponseTab),
+    SelectHistory(usize),
+    ClearHistory,
 }

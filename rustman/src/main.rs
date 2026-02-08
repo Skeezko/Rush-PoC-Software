@@ -1,10 +1,24 @@
-mod message;
-mod http_client;
+// src/main.rs
+
 mod app;
 mod view;
+mod message;
+mod http_client;
 
-use app::Rustman;
-use iced::{Application, Settings};
+#[cfg(feature = "iced12")]
 fn main() -> iced::Result {
-    iced::run(Rustman::update, Rustman::view)
+
+    app::Rustman::run_app()
+}
+
+#[cfg(feature = "iced14")]
+fn main() -> iced::Result {
+    // iced 0.14: runner custom dans a14.rs
+    app::Rustman::run_app()
+}
+
+// Si tu oublies d'activer une feature, tu auras un message clair:
+#[cfg(not(any(feature = "iced12", feature = "iced14")))]
+fn main() {
+    
 }
