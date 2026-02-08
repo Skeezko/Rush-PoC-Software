@@ -4,8 +4,7 @@ mod app;
 mod view;
 
 use app::Rustman;
-use iced::Application;
-
-fn main() {
-    println!("Hello, world!");
+use iced::{Application, Settings};
+fn main() -> iced::Result {
+    iced::run(Rustman::update, Rustman::view)
 }

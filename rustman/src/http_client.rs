@@ -23,7 +23,11 @@ impl HttpMethod {
     }
 }
 
+<<<<<<< HEAD
 #[derive(Debug, Clone)]
+=======
+#[derive(Clone,Debug)]
+>>>>>>> refs/remotes/origin/main
 pub struct ApiResponse {
     pub status: u16,
     pub status_text : String,
