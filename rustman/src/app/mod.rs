@@ -1,5 +1,3 @@
-// src/app/mod.rs
-
 #[cfg(feature = "iced12")]
 mod a12;
 #[cfg(feature = "iced12")]
