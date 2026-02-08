@@ -10,4 +10,3 @@ iced12=["iced"]
 iced = { version = "0.12", features = ["tokio", "advanced"],optional=true }
 reqwest = { version = "0.12", features = ["json"] }
 tokio = { version = "1", features = ["full"] }
-serde = { version = "1.0", features = ["derive"] }
